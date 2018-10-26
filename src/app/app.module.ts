@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MushroomComponent } from './mushroom/mushroom.component';
+import { FlowersModule } from './flowers/flowers.module';
+import { KingdomService } from './kingdom.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,10 @@ import { MushroomComponent } from './mushroom/mushroom.component';
     MushroomComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FlowersModule,
   ],
-  providers: [],
+  providers: [{ provide: KingdomService, useFactory: () => new KingdomService('🦖') }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

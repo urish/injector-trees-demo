@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class KingdomService {
-  public name = '🦖';
+  constructor(public name = '🦖') {
+    console.log(`Kingdom created: ${name}`);
+  }
+}
 
-  constructor() { }
+export function createKingdom(name: string) {
+  return new KingdomService(name);
 }
