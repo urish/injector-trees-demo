@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MushroomComponent } from './mushroom/mushroom.component';
+import { ForestComponent } from './forest/forest.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MushroomComponent
+    MushroomComponent,
+    ForestComponent
   ],
   imports: [
     BrowserModule
